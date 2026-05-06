@@ -1,5 +1,14 @@
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Choose environment"
+        required: true
+        default: "stating"
+        type: choice
+        options:
+          - stating
+          - prouduction
 jobs:
   deploy:
     runs-on: ubuntu-latest
